@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import * as authService from "../services/authService";
 
 export const AuthContext = createContext(null);
@@ -90,12 +90,13 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
-  const updateUser = (updatedUserData = {}) => {
-    const nextUser = { ...user, ...updatedUserData };
-    setUser(nextUser);
-    localStorage.setItem(USER_KEY, JSON.stringify(nextUser));
-    return { success: true, user: nextUser };
-  };
+  const updateUser = useCallback((updatedUserData = {}) => {
+    setUser(prevUser => {
+      const nextUser = { ...prevUser, ...updatedUserData };
+      localStorage.setItem(USER_KEY, JSON.stringify(nextUser));
+      return nextUser;
+    });
+  }, []);
 
   const value = useMemo(
     () => ({

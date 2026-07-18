@@ -23,7 +23,7 @@ import StaticPage from "./pages/StaticPage/StaticPage";
 import About from "./pages/About/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions/TermsConditions";
-import { Navigate } from "react-router-dom";
+
 
 function App() {
   return (

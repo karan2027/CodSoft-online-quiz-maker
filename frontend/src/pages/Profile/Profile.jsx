@@ -11,10 +11,6 @@ import * as userService from "../../services/userService";
 
 import "./Profile.css";
 
-const capitalize = (value) => {
-  if (!value) return "";
-  return value.charAt(0).toUpperCase() + value.slice(1);
-};
 
 const formatDate = (dateString) => {
   if (!dateString) return "-";

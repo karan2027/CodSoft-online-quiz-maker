@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { useAuth } from "../../context/AuthContext";
 import Navbar from "../../components/Navbar";
@@ -17,7 +17,6 @@ const capitalize = (value) => {
 function QuizDetails() {
   const { quizId } = useParams();
   const navigate = useNavigate();
-  const location = useLocation();
   const { isAuthenticated } = useAuth();
   
   const [quiz, setQuiz] = useState(null);

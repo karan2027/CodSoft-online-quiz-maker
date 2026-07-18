@@ -103,10 +103,6 @@ function Dashboard() {
     }
   };
 
-  const handleStartQuiz = (quizId) => {
-    navigate(`/quiz/${quizId}`);
-  };
-
   const recentAttempts = myResults.slice(0, 4);
 
   return (

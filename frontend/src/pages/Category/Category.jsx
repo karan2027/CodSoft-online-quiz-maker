@@ -33,7 +33,7 @@ const getCategoryStyle = (name) => {
 
 function Category() {
   const navigate = useNavigate();
-  const { setSelectedCategory, setSearchQuery } = useQuiz();
+  const { setSearchQuery } = useQuiz();
 
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);

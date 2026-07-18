@@ -25,7 +25,7 @@ function VerifyOTP() {
   const inputRefs = useRef([]);
 
   const otp = otpValues.join("");
-  const canResend = timer === 0;
+
 
   // Protect page from direct navigation without email
   useEffect(() => {

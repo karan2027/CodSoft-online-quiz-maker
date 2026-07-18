@@ -1,9 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import Button from "../../components/Button";
 import SearchBar from "../../components/SearchBar";
 import { useQuiz } from "../../context/QuizContext";
 
@@ -30,7 +29,6 @@ const formatDate = (dateString) => {
 };
 
 function History() {
-  const navigate = useNavigate();
   const { quizHistory, loadQuizHistory, loading, error } = useQuiz();
 
   const [searchTerm, setSearchTerm] = useState("");

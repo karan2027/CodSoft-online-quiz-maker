@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
+import api from "../../services/api";
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -16,8 +16,8 @@ function SubCategory() {
     const fetchSubcategories = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(
-          `http://localhost:5000/api/categories/${encodeURIComponent(categoryName)}/subcategories`
+        const response = await api.get(
+          `/categories/${encodeURIComponent(categoryName)}/subcategories`
         );
         if (response.data.success) {
           setSubcategories(response.data.data);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../../services/api";
 
 import { useAuth } from "../../context/AuthContext";
 
@@ -51,7 +51,7 @@ function Home() {
       try {
         const [quizResult, categoryResult] = await Promise.all([
           quizService.getAllQuizzes({ limit: 6 }),
-          axios.get("http://localhost:5000/api/categories"), // Adjust base URL if needed, or use a service
+          api.get("/categories"),
         ]);
 
         if (quizResult.success && quizResult.data) {

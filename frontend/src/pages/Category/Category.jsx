@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../../services/api";
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -42,7 +42,7 @@ function Category() {
     const fetchCategories = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:5000/api/categories");
+        const res = await api.get("/categories");
         if (res.data.success) {
           setCategories(res.data.data || []);
         }

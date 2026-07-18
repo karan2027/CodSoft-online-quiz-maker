@@ -1,0 +1,35 @@
+============================================================
+QUIZMASTER PRO - TECHNICAL & SYSTEM REQUIREMENTS
+============================================================
+
+1. SYSTEM PREREQUISITES
+-----------------------
+- Node.js (v16.0.0 or higher recommended)
+- NPM (v7.0.0 or higher)
+- MongoDB Database (Local instance running at mongodb://localhost:27017 or a MongoDB Atlas Cloud URI)
+- Modern Web Browser (Chrome, Firefox, Edge, Safari, etc.)
+
+2. BACKEND DEPENDENCIES & LIBRARIES
+-----------------------------------
+- Express.js (HTTP Server Framework)
+- Mongoose (MongoDB ODM)
+- JSONWebToken (JWT Authentication tokens)
+- Bcryptjs (Password hashing)
+- Cors (Cross-Origin Resource Sharing middleware)
+- Cookie-Parser (Cookie parsing)
+- Express-Validator (Input validation)
+- Dotenv (Environment variables loading)
+- Cloudinary (Image uploads)
+- Multer (Multipart/form-data parser for uploads)
+- Nodemailer (OTP / Email dispatch service)
+
+3. FRONTEND DEPENDENCIES & LIBRARIES
+------------------------------------
+- React.js (v18.0.0+)
+- React Router DOM (Single Page Application routing)
+- Axios (HTTP Client for API calls)
+
+4. SERVICES SETUP REQUIREMENTS
+------------------------------
+- Cloudinary Account: Needs CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+- Email Transporter: Needs SMTP credentials (e.g. Gmail App Passwords) for sending OTP registration codes.

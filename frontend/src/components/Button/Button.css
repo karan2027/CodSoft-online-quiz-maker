@@ -1,0 +1,135 @@
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: auto;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    color var(--transition-base),
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.custom-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.custom-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.custom-button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 3px;
+}
+
+.custom-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  box-shadow: none;
+  transform: none;
+}
+
+.custom-button--small {
+  min-height: 36px;
+  padding: 0.55rem 0.85rem;
+  font-size: var(--font-size-sm);
+}
+
+.custom-button--medium {
+  min-height: 44px;
+  padding: 0.75rem 1.1rem;
+  font-size: var(--font-size-base);
+}
+
+.custom-button--large {
+  min-height: 52px;
+  padding: 0.9rem 1.35rem;
+  font-size: var(--font-size-md);
+}
+
+.custom-button--full-width {
+  width: 100%;
+}
+
+.custom-button--primary {
+  color: var(--color-text-inverse);
+  background: var(--color-primary);
+}
+
+.custom-button--primary:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.custom-button--secondary {
+  color: var(--color-text-inverse);
+  background: var(--color-secondary);
+}
+
+.custom-button--secondary:hover:not(:disabled) {
+  background: var(--color-secondary-light);
+}
+
+.custom-button--success {
+  color: var(--color-text-inverse);
+  background: var(--color-success);
+}
+
+.custom-button--success:hover:not(:disabled) {
+  filter: brightness(0.94);
+}
+
+.custom-button--danger {
+  color: var(--color-text-inverse);
+  background: var(--color-error);
+}
+
+.custom-button--danger:hover:not(:disabled) {
+  filter: brightness(0.94);
+}
+
+.custom-button--outline {
+  color: var(--color-primary);
+  border-color: var(--color-border-strong);
+  background: var(--color-surface);
+}
+
+.custom-button--outline:hover:not(:disabled) {
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.custom-button--loading {
+  pointer-events: none;
+}
+
+.custom-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.custom-button__icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+.custom-button__text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
